@@ -32,9 +32,41 @@ In this project the Domain independent planners are in domain_independent_planne
     cd ../Satellite_Domain/
     chmod +x sat_pddl_run.sh
     cd ../../pddl_generators/blocksworld-generator/
+    make
     chmod +x blocksworld
     chmod +x blocks_problem_generator.sh
     cd ../satellite-generator/
     chmod +x satgen
     chmod +x sat_problem_generator.sh
+    cd ../..
     ```
+
+## Running the files
+
+### Block World Domain
+
+1. First generate the pddl problem files, for generating the problem files, run:
+    ```
+    cd <path to Performance_analysis_between_HTN_and_DomainIndependent_Planners>/pddl_generators/blocksworld-generator/
+    ./blocks_problem_generator.sh
+    ```
+2. Now run the domain independent planner, run the next set of commands:
+    ```
+    cd ../../Domains/BWD/
+    ./bws_pddl_run.sh
+    ```
+    The results of the domain independent planner will be in this [folder](/Domains/BWD/results/)
+
+3. Finally Running the HTN planner, run the followring commands:
+    ```
+    cd ../../GTPyhop/Examples/
+    python3
+    ```
+    In the python terminal
+    ```
+    import blocks_htn
+    blocks_htn.tester.multi_test()
+    exit()
+    ```
+    After running the above commands, the results will be [here](/GTPyhop/Examples/blocks_htn/report.txt)
+
