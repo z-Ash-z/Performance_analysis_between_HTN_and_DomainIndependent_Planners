@@ -31,4 +31,10 @@ In this project the Domain independent planners are in domain_independent_planne
     chmod +x bws_pddl_run.sh
     cd ../Satellite_Domain/
     chmod +x sat_pddl_run.sh
+    cd ../../pddl_generators/blocksworld-generator/
+    chmod +x blocksworld
+    chmod +x blocks_problem_generator.sh
+    cd ../satellite-generator/
+    chmod +x satgen
+    chmod +x sat_problem_generator.sh
     ```
