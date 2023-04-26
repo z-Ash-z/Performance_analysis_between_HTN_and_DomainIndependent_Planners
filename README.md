@@ -50,7 +50,8 @@ In this project the Domain independent planners are in domain_independent_planne
     cd <path to Performance_analysis_between_HTN_and_DomainIndependent_Planners>/pddl_generators/blocksworld-generator/
     ./blocks_problem_generator.sh
     ```
-2. Now run the domain independent planner, run the next set of commands:
+    Check the generated problem pddl files in this [folder](/Domains/BWD/problem/)
+2. Now run the domain independent planner, the next set of commands are:
     ```
     cd ../../Domains/BWD/
     ./bws_pddl_run.sh
@@ -68,5 +69,41 @@ In this project the Domain independent planners are in domain_independent_planne
     blocks_htn.tester.multi_test()
     exit()
     ```
-    After running the above commands, the results will be [here](/GTPyhop/Examples/blocks_htn/report.txt)
+    After running the above commands, the results will be [here](/GTPyhop/Examples/blocks_htn/)
 
+### Satellite domain
+
+1. First generate the pddl problem files, for generating the problem files, run:
+    ```
+    cd <path to Performance_analysis_between_HTN_and_DomainIndependent_Planners>/pddl_generators/satellite-generator/
+    ./sat_problem_generator.sh
+    ```
+    The generated pddl files will be in this [folder](/Domains/Satellite_Domain/problem/)
+
+2. Now run the domain independent planner, the next set of commands are:
+    ```
+    cd ../../Domains/Satellite_Domain/
+    ./sat_pddl_run.sh
+    ```
+    The results of the domain independent planner will be in this [folder](/Domains/Satellite_Domain/results/)
+
+3. Finally Running the HTN planner, run the followring commands:
+    ```
+    cd ../../GTPyhop/Examples/
+    import satellite_htn
+    ```
+    In the python terminal
+    ```
+    import satellite_htn
+    satellite_htn.tester.multi_test()
+    exit()
+    ```
+    After running the above commands, the results will be [here](/GTPyhop/Examples/satellite_htn/)
+
+After running all the above command we get 4 result files:
+1. [Block world - Domain Independent Planner](/Domains/BWD/results/stats.txt)
+2. [Block world - HTN Panner](/GTPyhop/Examples/blocks_htn/report.txt)
+3. [Satellite domain - Domain Independent Planner](/Domains/Satellite_Domain/results/stats.txt)
+4. [Satellite domain - HTN Planner](/GTPyhop/Examples/satellite_htn/report.txt)
+
+Using all these files we can synthesize our results.
