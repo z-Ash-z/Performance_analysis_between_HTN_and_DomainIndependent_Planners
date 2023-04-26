@@ -90,7 +90,7 @@ In this project the Domain independent planners are in domain_independent_planne
 3. Finally Running the HTN planner, run the followring commands:
     ```
     cd ../../GTPyhop/Examples/
-    import satellite_htn
+    python3
     ```
     In the python terminal
     ```
