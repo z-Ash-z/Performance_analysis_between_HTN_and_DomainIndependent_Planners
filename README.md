@@ -22,5 +22,8 @@ In this project the Domain independent planners are in domain_independent_planne
     ```
 - For activating the executables use the following commands
     ```
-    
+    cd domain_independent_planners/Metric-FF-v2.0/
+    chmod +x ff
+    cd ../fast-downward-22.12/
+    ./build.py
     ```
