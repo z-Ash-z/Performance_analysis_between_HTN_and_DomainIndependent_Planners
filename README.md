@@ -26,4 +26,9 @@ In this project the Domain independent planners are in domain_independent_planne
     chmod +x ff
     cd ../fast-downward-22.12/
     ./build.py
+    chmod +x fast-downward.py
+    cd ../../Domains/BWD/
+    chmod +x bws_pddl_run.sh
+    cd ../Satellite_Domain/
+    chmod +x sat_pddl_run.sh
     ```
