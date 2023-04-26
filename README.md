@@ -106,4 +106,4 @@ After running all the above command we get 4 result files:
 3. [Satellite domain - Domain Independent Planner](/Domains/Satellite_Domain/results/stats.txt)
 4. [Satellite domain - HTN Planner](/GTPyhop/Examples/satellite_htn/report.txt)
 
-Using all these files we can synthesize our results.
+Using all these files we can synthesize our results as show in the [analysis file](/Result_analysis.xlsx).
